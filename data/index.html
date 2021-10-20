@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Jordan Navin">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Data - A/B Testing for Balto Customer Success Managers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data";
+    var mkdocs_page_input_path = "data.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> A/B Testing for Balto Customer Success Managers</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sharing">Sharing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#file-structure">File Structure</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#call-level">Call-level</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#agent-time-level">Agent-time level</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">A/B Testing for Balto Customer Success Managers</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/BaltoSoftware/ab-tests/edit/master/docs/data.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="data">Data</h1>
+<h2 id="sharing">Sharing</h2>
+<h3 id="file-structure">File Structure</h3>
+<p>When a new data sharing cadence is established for a customer conducting an AB test or pilot, 
+the CSM will be tasked with delivering the raw data to a hierarchical directory structure in the following format:</p>
+<div class="codehilite"><pre><span></span><code>ab-test-customer-data/
+└── CUSTOMER/
+    └── DATA_FOLDER/
+</code></pre></div>
+
+<p><code>ab-test-customer-data</code> is a directory located on Google Drive in <code>Customer Success Team Drive</code>. 
+<code>CUSTOMER</code> should be informative to the specific customer the pilot is being conducted for, and <code>DATA_FOLDER</code> 
+specific to a single pilot. An example of this file structure can be found <a href="https://drive.google.com/drive/folders/16CR_IrDc8cZiTcfSN955sWDA2lFwTORd?usp=sharing">here</a>.
+When naming these folders, please avoid using capitalization, special characters and spaces as this can introduce unnecessary complications. 
+For example, <code>bradley_lead_group</code> or <code>blg</code> are acceptable directory names, while <code>Bradley Lead Group</code> is not.
+If there are security requirements from a specific client that require FTP or something similar, DS will attempt to accommodate those needs.</p>
+<h2 id="examples">Examples</h2>
+<p>Typically, customers share data in one of two formats--call-level data, or agent-time level data. 
+Like the name implies, call-level data are records where each observation (or row) is a single call. To use call-level data during a test, DS
+at a bare minimum must know whether the call as successful, whether the call was made using Balto, and the date/time of the call.</p>
+<p>Agent-level data are records where each observation represents a single agent-time (e.g. day or week) combination. To use this type of data for a test
+the bare minimum DS needs are who the agent is, whether they are a Balto user, the time unit of observation, and the KPI value for each agent-time row. Below are example data sets for each general type of data.</p>
+<h3 id="call-level">Call-level</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>user_id</strong></th>
+<th align="center"><strong>line_of_insurance</strong></th>
+<th align="center"><strong>call_date_pst</strong></th>
+<th align="center"><strong>contact_id</strong></th>
+<th align="center"><strong>is_outbound</strong></th>
+<th align="center"><strong>call_duration_seconds</strong></th>
+<th align="center"><strong>inbound_call_ltv_bucket</strong></th>
+<th align="center"><strong>is_transfer</strong></th>
+<th align="center"><strong>policy_sale</strong></th>
+<th align="center"><strong>monthly_premium</strong></th>
+<th align="center"><strong>ltv</strong></th>
+<th align="center"><strong>user_type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1062843</td>
+<td align="center">med_advantage</td>
+<td align="center">6/14/21</td>
+<td align="center">WTed88aae6b4cfe5d50b3b859810f92f3d</td>
+<td align="center">FALSE</td>
+<td align="center">108</td>
+<td align="center">[60, 80)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1098622</td>
+<td align="center">med_advantage</td>
+<td align="center">6/25/21</td>
+<td align="center">WT0dab9e12bc77f3fbf6c0eb31fddbc95f</td>
+<td align="center">FALSE</td>
+<td align="center">245</td>
+<td align="center">[40, 60)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1084931</td>
+<td align="center">life</td>
+<td align="center">6/25/21</td>
+<td align="center">WTa091794278df3b07c7d4a22507ca7f29</td>
+<td align="center">FALSE</td>
+<td align="center">40</td>
+<td align="center">[0, 20)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1117808</td>
+<td align="center">med_advantage</td>
+<td align="center">6/28/21</td>
+<td align="center">WT004cc1db36cf8a24c3f7d78fb9862002</td>
+<td align="center">FALSE</td>
+<td align="center">297</td>
+<td align="center">[40, 60)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">control</td>
+</tr>
+<tr>
+<td align="center">1084877</td>
+<td align="center">life</td>
+<td align="center">6/28/21</td>
+<td align="center">WT33b6e4cf14b9bb746a68a306c6ffbdde</td>
+<td align="center">FALSE</td>
+<td align="center">61</td>
+<td align="center">[0, 20)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1085334</td>
+<td align="center">med_advantage</td>
+<td align="center">6/28/21</td>
+<td align="center">WT5fd43bf6-5e6a-4de9-8244-809224a8214a</td>
+<td align="center">TRUE</td>
+<td align="center">536</td>
+<td align="center"></td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1084461</td>
+<td align="center">med_advantage</td>
+<td align="center">6/29/21</td>
+<td align="center">WTbf85c17c03274fef98d8906833429fb5</td>
+<td align="center">FALSE</td>
+<td align="center">938</td>
+<td align="center">[20, 40)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">experiment</td>
+</tr>
+<tr>
+<td align="center">1008973</td>
+<td align="center">life</td>
+<td align="center">6/30/21</td>
+<td align="center">WTa1ee6823c851f53d6e96115e45cbdb46</td>
+<td align="center">FALSE</td>
+<td align="center">721</td>
+<td align="center">[40, 60)</td>
+<td align="center">FALSE</td>
+<td align="center">FALSE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">control</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agent-time-level">Agent-time level</h3>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>CallDate</strong></th>
+<th align="center"><strong>DateGroup</strong></th>
+<th align="center"><strong>VendorCampaignName</strong></th>
+<th align="center"><strong>Agent</strong></th>
+<th align="center"><strong>BaltoGroup</strong></th>
+<th align="center"><strong>AgentLevel</strong></th>
+<th align="center"><strong>DialAttempt</strong></th>
+<th align="center"><strong>GrossConnections</strong></th>
+<th align="center"><strong>HumanContacts</strong></th>
+<th align="center"><strong>Total_Att_Transfers</strong></th>
+<th align="center"><strong>UniqueTransferAttempts</strong></th>
+<th align="center"><strong>UniqueConnectedTransfers</strong></th>
+<th align="center"><strong>UniqueTransferSuccess</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Campaign - SQS Lead Screening</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Campaign - SQS Lead Screening</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Life Standard</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Life Standard</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">3+</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Medicare Standard</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">1</td>
+<td align="center">87</td>
+<td align="center">56</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Medicare Standard</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">2</td>
+<td align="center">7</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Medicare Standard</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">3+</td>
+<td align="center">163</td>
+<td align="center">60</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Medicare Standard - Double Dial</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">1</td>
+<td align="center">11</td>
+<td align="center">5</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">2021-09-01</td>
+<td align="center">Pre-Test</td>
+<td align="center">Allied - Medicare Standard - Double Dial</td>
+<td align="center">allied_aogbeh</td>
+<td align="center">Test</td>
+<td align="center">Specialty</td>
+<td align="center">2</td>
+<td align="center">27</td>
+<td align="center">11</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/BaltoSoftware/ab-tests/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
