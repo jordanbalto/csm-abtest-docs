@@ -3,7 +3,7 @@
 ## Sharing
 
 ### File Structure
-When a new data sharing cadence is established for a customer conducting an AB test or pilot, 
+When a new data sharing cadence is established for a customer conducting an A/B test or pilot, 
 the CSM will be tasked with delivering the raw data to a hierarchical directory structure in the following format:
 
 ```
