@@ -1,0 +1,6 @@
+site_name: A/B Testing for Balto Customer Success Managers
+site_author: Jordan Navin
+site_url: ""
+theme: readthedocs
+markdown_extensions:
+  - codehilite
