@@ -1,3 +1,3 @@
 # Balto CSM A/B Testing Documentation
 
-Created with [MkDocs](https://www.mkdocs.org/)
+Created using [MkDocs](https://www.mkdocs.org/).
