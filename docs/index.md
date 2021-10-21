@@ -21,4 +21,6 @@ made à la carte, or you can request reports be sent directly to you at some lev
 Either type of request should be made in the relevant Asana card.
 
 Please refer to the remaining sections of this documentation for specifics
-relevant to each step listed above. 
+relevant to each step listed above.
+
+Example reports can be accessed by clicking on an examples listed in the sidebar. 

@@ -1,6 +1,14 @@
 site_name: A/B Testing for Balto Customer Success Managers
+site_description: Balto Data Science
 site_author: Jordan Navin
 site_url: ""
 theme: readthedocs
 markdown_extensions:
   - codehilite
+nav:
+  - Overview: index.md
+  - Data: data.md
+  - FAQ: faq.md
+  - Example Reports:
+      - RingCentral Opp to Close (OtC) %: ring_central_example.html
+      - SelectQuote Outbound Transfer Rate:  ob_report.html

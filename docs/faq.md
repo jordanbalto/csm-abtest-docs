@@ -3,7 +3,7 @@
 - We use statistical modeling, specifically [mixed modeling](https://en.wikipedia.org/wiki/Mixed_model) to estimate the 
 marginal impact of Balto usage while simultaneously controlling for as many potential confounding factors as possible.
 ## Why use a statistical model instead of comparing group level averages?
-- Statistical (regression) models can account
+- Statistical ([regression](https://en.wikipedia.org/wiki/Regression_analysis)) models can account
   for other sources of variation in the KPI of interest besides Balto/non-Balto 
   group assignment.
 - Models can account for time explicitly.
